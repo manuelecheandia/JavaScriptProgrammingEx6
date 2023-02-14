@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"></head>
-
+    <script src="app.js"></script>
     <style>
         *{
             font-family: 'Montserrat', sans-serif;
@@ -18,6 +18,64 @@
 
 <body>
     <h1>Working with arrays</h1>
+    <h2>Cars</h2>
+    <h3>Cars array length is <script>document.write(cars.length)</script></h3>
 
+    <ul>
+        <script>
+            for(let i = 0; i<cars.length; i++){
+                document.write(`<li>${cars[i]}</li>`);
+            }
+        </script>
+    </ul>
+
+    <!-- Create an ul for displaying makes. Use a for of loop -->
+
+    <h3>Makes</h3>
+    <ul>
+        <script>
+            for(const make of makes){
+                document.write(`<li>${make}</li>`);
+            }
+        </script>
+    </ul>
+    <div>
+        <select name="" id="">
+            <script>
+                for(const m of makes){
+                    document.write(`<option>${m}</option>`);
+                }
+            </script>
+        </select>
+    </div>
+    <br>
+    <div>
+        <!-- Checkboxes -->
+        <script>
+            for(const m of makes){
+                document.write(`<input type="checkbox" name="${m}"> ${m}`)
+            }
+        </script>
+    </div>
+    <br>
+    <div>
+        <script>
+            for(const m of makes){
+                document.write(`<input type="radio" name="selectedMake"> ${m}`)
+            }
+        </script>
+    </div>
+    <br>
+    <ul>
+        <script>
+            let things= [1,2,100,true, new Date(), 'Chris', 'GEX', 2023, 'WMAD'];
+            console.log(things);
+
+            //li
+            things.forEach((thing) =>{
+                document.write(`<li>${thing}</li>`);
+            })
+        </script>
+    </ul>
 </body>
 </html>
